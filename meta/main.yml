@@ -1,0 +1,20 @@
+dependencies:
+  - role: victorock.ipa
+
+galaxy_info:
+  author: Thomas Woerner, Victor da Costa
+  description: A role to configure IPA
+  company: Red Hat, Inc
+  license: GPLv3
+  min_ansible_version: 2.0
+  platforms:
+    - name: Fedora
+      versions:
+        - 25
+    - name: rhel
+      versions:
+        - 7
+
+  galaxy_tags:
+    - identity
+    - ipa

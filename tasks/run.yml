@@ -1,0 +1,16 @@
+---
+- name: Import variables specific to distribution
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "vars/{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    - "vars/{{ ansible_distribution }}.yml"
+    - "vars/default.yml"
+
+- name: Install IPA server
+  include_tasks: ipa.yml
+  when: state|default('present') == 'present'
+
+- name: Install krb5 server
+  include_tasks: krb5.yml
+  when: state|default('present') == 'present'
