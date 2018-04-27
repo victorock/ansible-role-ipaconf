@@ -1,8 +1,9 @@
-dependencies: []
+dependencies:
+  - role: victorock.ipa
 
 galaxy_info:
   author: Thomas Woerner, Victor da Costa
-  description: A role to configure IPA default.conf
+  description: A role to configure IPA
   company: Red Hat, Inc
   license: GPLv3
   min_ansible_version: 2.0
